@@ -1,0 +1,34 @@
+# \u5E94\u7528\u540D\u79F0
+server:
+  port: 8811
+spring:
+  application:
+    name: video
+  h2:
+    console:
+      enabled: true  # \u7EBF\u4E0A\u4E00\u5B9A\u8981\u662Ffalse
+      path: /h2
+  datasource:
+    hikari:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:file:~/download;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+      username: root
+      password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
+
+
+
